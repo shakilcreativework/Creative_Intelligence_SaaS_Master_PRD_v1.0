@@ -12,6 +12,7 @@ import {
   FiSettings,
   FiHelpCircle,
   FiCompass,
+  FiLayers,
 } from "react-icons/fi";
 import { cn } from "@/lib/utils";
 
@@ -22,7 +23,8 @@ export default function Sidebar({ currentTab, onSelectTab }) {
     { id: "assets", label: "Asset Library", icon: FiImage },
     { id: "preflight", label: "Preflight Doctor", icon: FiCheckCircle, badge: "Core" },
     { id: "designfit", label: "Design Fit Checker", icon: FiMaximize2 },
-    { id: "similarity", label: "Similarity Engine", icon: FiTrendingUp, badge: "New" },
+    { id: "similarity", label: "Similarity Engine", icon: FiTrendingUp },
+    { id: "consistency", label: "Collection Consistency", icon: FiLayers, badge: "CONS-001" },
     { id: "metadata", label: "Metadata Studio", icon: FiTag },
     { id: "packaging", label: "Export & Packaging", icon: FiPackage },
     { id: "opportunities", label: "Opportunities", icon: FiCompass },

@@ -101,10 +101,19 @@
 - [x] Subdirectory Toggles: `SOURCE/`, `PREVIEW/`, `METADATA/`, `DOCUMENTATION/`
 - [x] Batch Multi-Asset Packaging Pipeline with SUBMISSION_MANIFEST.json & README.txt
 
-### Phase 6: Dashboard, Opportunity & Portfolio (`DASH-001`, `OPP-001`)
+### Phase 6: Consistency & Portfolio Intelligence (`CONS-001`, `DASH-001`, `OPP-001`)
 - [x] Executive Dashboard (`DashboardModule.jsx`)
 - [x] Opportunity Baseline Engine (`OpportunitiesModule.jsx`)
-- [ ] Production Activity & Historical Audit Log
+- [x] Collection Consistency Checker (`CONS-001` / PRD §12.9) (`src/lib/consistencyEngine.js`, `ConsistencyModule.jsx`)
+  - [x] Stroke weight uniformity evaluation & baseline detection
+  - [x] Artboard scale & aspect ratio conformance
+  - [x] Corner treatments & linecap/linejoin consistency
+  - [x] Color system & rogue swatch isolation
+  - [x] Visual weight & element density balance
+  - [x] Interactive Outlier Inspector & Side-by-Side Spec Matrix
+  - [x] Consistency audit report export
+- [ ] Production Activity & Historical Audit Log (`PORT-001` / PRD §27)
+- [ ] Rejection Intelligence Engine (`REJ-001` / PRD §12.13)
 
 ### Phase 7: Golden Path Acceptance & Polish
 - [x] MVP Golden Path interactive cycle verified
