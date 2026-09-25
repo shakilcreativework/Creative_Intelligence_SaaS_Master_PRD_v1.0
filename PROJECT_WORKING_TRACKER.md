@@ -123,6 +123,12 @@
   - [x] High-demand commercial category gap matrix
   - [x] Immutable lifecycle audit timeline (Ingestion, Preflight, Auto-Fix, Similarity, Metadata, Packaging)
   - [x] Event inspector modal & JSON audit trail export
+- [x] Designer Proofing & Revision Studio (`PROOF-001`, `REV-001` / PRD §12.15) (`src/lib/proofingEngine.js`, `ProofingModule.jsx`)
+  - [x] Client review session management & secure token generator
+  - [x] PRD §12.15 revision lifecycle stepper (`Draft` ➔ `Sent for Review` ➔ `Changes Requested` ➔ `Approved` ➔ `Final`)
+  - [x] Pinpoint vector canvas annotation pins with (x, y) coordinates
+  - [x] Release version history (`v1.0`, `v1.1`, `v1.2`) & resolution toggles
+  - [x] One-click shareable review link copy
 
 ### Phase 7: Golden Path Acceptance & Polish
 - [x] MVP Golden Path interactive cycle verified

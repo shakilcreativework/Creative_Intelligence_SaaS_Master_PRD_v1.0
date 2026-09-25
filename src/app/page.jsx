@@ -15,6 +15,7 @@ import SimilarityModule from "@/components/modules/SimilarityModule";
 import ConsistencyModule from "@/components/modules/ConsistencyModule";
 import RejectionModule from "@/components/modules/RejectionModule";
 import PortfolioModule from "@/components/modules/PortfolioModule";
+import ProofingModule from "@/components/modules/ProofingModule";
 import AuthModal from "@/components/auth/AuthModal";
 import WorkspaceModal from "@/components/workspace/WorkspaceModal";
 import { SAMPLE_ERRONEOUS_SVG, SAMPLE_COMPLIANT_SVG } from "@/lib/sampleVectors";
@@ -356,6 +357,12 @@ export default function HomePage() {
                 setCurrentTab("opportunities");
                 toast.info("Navigated to Opportunity Engine");
               }}
+            />
+          )}
+
+          {currentTab === "proofing" && (
+            <ProofingModule
+              assets={assets}
             />
           )}
 

@@ -15,6 +15,7 @@ import {
   FiLayers,
   FiAlertOctagon,
   FiActivity,
+  FiEye,
 } from "react-icons/fi";
 import { cn } from "@/lib/utils";
 
@@ -32,6 +33,7 @@ export default function Sidebar({ currentTab, onSelectTab }) {
     { id: "packaging", label: "Export & Packaging", icon: FiPackage },
     { id: "opportunities", label: "Opportunities", icon: FiCompass },
     { id: "portfolio", label: "Portfolio & Audit", icon: FiActivity, badge: "PORT-001" },
+    { id: "proofing", label: "Designer Proofing", icon: FiEye, badge: "PROOF-001" },
   ];
 
   const secondaryNav = [
