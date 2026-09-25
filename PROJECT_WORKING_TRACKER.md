@@ -117,7 +117,12 @@
   - [x] PRD §12.13 recurring failure mode analyzer & root cause playbooks
   - [x] Pre-submission rejection risk simulator with live portfolio asset cross-referencing
   - [x] Rejection incident log table with CSV export
-- [ ] Production Activity & Historical Audit Log (`PORT-001` / PRD §27)
+- [x] Portfolio Intelligence & Historical Audit Log (`PORT-001` / PRD §12.12 & §27) (`src/lib/portfolioEngine.js`, `src/lib/activityEngine.js`, `PortfolioModule.jsx`)
+  - [x] Deterministic weighted Portfolio Health Index (Quality 40% + Metadata 35% + Rejection Shield 25%)
+  - [x] PRD §12.12 documented methodology disclosure
+  - [x] High-demand commercial category gap matrix
+  - [x] Immutable lifecycle audit timeline (Ingestion, Preflight, Auto-Fix, Similarity, Metadata, Packaging)
+  - [x] Event inspector modal & JSON audit trail export
 
 ### Phase 7: Golden Path Acceptance & Polish
 - [x] MVP Golden Path interactive cycle verified
