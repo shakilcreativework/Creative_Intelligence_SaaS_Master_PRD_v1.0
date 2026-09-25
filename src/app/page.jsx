@@ -303,6 +303,8 @@ export default function HomePage() {
 
           {currentTab === "packaging" && (
             <PackagingModule
+              assets={assets}
+              activeProject={workspaceProjects[0]}
               onRestartFlow={() => {
                 setCurrentTab("dashboard");
                 toast.success("Golden Path cycle completed!");

@@ -96,7 +96,10 @@
 ### Phase 5: Export Preparation & Packaging Engine (`PACK-001`, `PACK-002`)
 - [x] Multi-directory ZIP submission packager (`src/lib/packagingEngine.js`)
 - [x] Interactive Packaging Module with live file generation (`PackagingModule.jsx`)
-- [x] Batch CSV metadata generator & SUBMISSION_MANIFEST.json
+- [x] Marketplace CSV Batch Profiles: Adobe Stock, Shutterstock, Universal
+- [x] Configurable Vector Naming Patterns (`{index}_{slug}`, `{category}_{slug}`, `{original}`)
+- [x] Subdirectory Toggles: `SOURCE/`, `PREVIEW/`, `METADATA/`, `DOCUMENTATION/`
+- [x] Batch Multi-Asset Packaging Pipeline with SUBMISSION_MANIFEST.json & README.txt
 
 ### Phase 6: Dashboard, Opportunity & Portfolio (`DASH-001`, `OPP-001`)
 - [x] Executive Dashboard (`DashboardModule.jsx`)
