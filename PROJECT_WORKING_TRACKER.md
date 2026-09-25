@@ -88,6 +88,10 @@
 - [x] Metadata Studio Form (`MetadataModule.jsx`)
 - [x] SEO Quality Score Engine & Keyword Validation (`src/lib/metadataEngine.js`)
 - [x] Duplicate Keyword & Prohibited Terms Detector
+- [x] Multi-Dimensional Similarity Engine (`src/lib/similarityEngine.js`)
+- [x] Portfolio Overlap Scanner: Visual Structure, Concept, Color, Metadata
+- [x] Side-by-Side Dual SVG Composition Inspector (`SimilarityModule.jsx`)
+- [x] Marketplace Duplicate Rejection Risk Ratings & Actionable Differentiation Guidance
 
 ### Phase 5: Export Preparation & Packaging Engine (`PACK-001`, `PACK-002`)
 - [x] Multi-directory ZIP submission packager (`src/lib/packagingEngine.js`)
