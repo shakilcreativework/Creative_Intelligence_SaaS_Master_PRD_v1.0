@@ -10,8 +10,10 @@ import MetadataModule from "@/components/modules/MetadataModule";
 import PackagingModule from "@/components/modules/PackagingModule";
 import ProjectsModule from "@/components/modules/ProjectsModule";
 import OpportunitiesModule from "@/components/modules/OpportunitiesModule";
+import AssetsModule from "@/components/modules/AssetsModule";
 import AuthModal from "@/components/auth/AuthModal";
 import WorkspaceModal from "@/components/workspace/WorkspaceModal";
+import { SAMPLE_ERRONEOUS_SVG, SAMPLE_COMPLIANT_SVG } from "@/lib/sampleVectors";
 
 export default function HomePage() {
   const [currentTab, setCurrentTab] = useState("dashboard");
@@ -47,6 +49,82 @@ export default function HomePage() {
   ]);
   const [activeWorkspace, setActiveWorkspace] = useState(workspaces[0]);
   const [isWorkspaceOpen, setIsWorkspaceOpen] = useState(false);
+
+  // Shared Asset Library Portfolio (PRD 12.5)
+  const [assets, setAssets] = useState([
+    {
+      id: "AST-001",
+      filename: "crypto_fintech_isometric_nodes.svg",
+      name: "Crypto FinTech Isometric Nodes",
+      category: "Business & Finance",
+      format: "SVG",
+      width: 4000,
+      height: 2800,
+      preflightStatus: "passed",
+      hasLiveText: false,
+      boundsOverflow: 0,
+      content: SAMPLE_COMPLIANT_SVG,
+      metadata: {
+        title: "Futuristic Isometric Cryptocurrency Blockchain FinTech Technology Vector Elements",
+        description: "High quality scalable vector illustration set for fintech, banking, decentralized cryptocurrency data analytics and dashboard user interfaces.",
+        keywords: ["cryptocurrency", "blockchain", "fintech", "banking", "finance", "data", "isometric"],
+      },
+    },
+    {
+      id: "AST-002",
+      filename: "crypto_dashboard_unclipped_sample.svg",
+      name: "Crypto Analytics Chart Unclipped",
+      category: "Technology",
+      format: "SVG",
+      width: 1600,
+      height: 1200,
+      preflightStatus: "failed",
+      hasLiveText: true,
+      boundsOverflow: 20,
+      content: SAMPLE_ERRONEOUS_SVG,
+      metadata: {
+        title: "FinTech Crypto Analytics Decentralized Asset Flow",
+        description: "Decentralized crypto analytics chart with unexpanded text and artboard border overflow.",
+        keywords: ["crypto", "chart", "analytics", "unoutlined", "dashboard"],
+      },
+    },
+    {
+      id: "AST-003",
+      filename: "sustainable_green_energy_line_icons.svg",
+      name: "Clean Energy Eco Icons",
+      category: "Environment",
+      format: "SVG",
+      width: 4000,
+      height: 2800,
+      preflightStatus: "passed",
+      hasLiveText: false,
+      boundsOverflow: 0,
+      content: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="16" fill="#064e3b"/><circle cx="50" cy="50" r="30" fill="none" stroke="#34d399" stroke-width="4"/><path d="M50 30 L50 70 M30 50 L70 50" stroke="#34d399" stroke-width="4" stroke-linecap="round"/></svg>`,
+      metadata: {
+        title: "Clean Green Energy Solar & Wind Turbine Flat Line Vectors",
+        description: "Scalable eco energy and environmental sustainability vector icons for corporate presentations.",
+        keywords: ["eco", "solar", "wind", "sustainability", "clean energy", "green"],
+      },
+    },
+    {
+      id: "AST-004",
+      filename: "cyber_hud_futuristic_rings.svg",
+      name: "Cyber HUD Interface Rings",
+      category: "Sci-Fi / UI",
+      format: "SVG",
+      width: 4000,
+      height: 2800,
+      preflightStatus: "passed",
+      hasLiveText: false,
+      boundsOverflow: 0,
+      content: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="16" fill="#1e1b4b"/><circle cx="50" cy="50" r="35" fill="none" stroke="#818cf8" stroke-width="3" stroke-dasharray="6 4"/><circle cx="50" cy="50" r="20" fill="none" stroke="#38bdf8" stroke-width="2"/></svg>`,
+      metadata: {
+        title: "Sci-Fi Cyberpunk HUD Sci-Fi User Interface Futuristic Display Rings",
+        description: "Vector user interface holographic rings and radar displays.",
+        keywords: ["cyberpunk", "hud", "sci-fi", "futuristic", "ui", "radar", "vector"],
+      },
+    },
+  ]);
 
   // Project Workspaces Scoped to Tenants
   const [projects, setProjects] = useState([
@@ -169,6 +247,24 @@ export default function HomePage() {
             <ProjectsModule
               projects={workspaceProjects}
               onInspectProject={() => setCurrentTab("preflight")}
+            />
+          )}
+
+          {currentTab === "assets" && (
+            <AssetsModule
+              assets={assets}
+              onInspectInPreflight={(asset) => {
+                setCurrentTab("preflight");
+                toast.info(`Loaded "${asset.name}" into Preflight Doctor`);
+              }}
+              onEditMetadata={(asset) => {
+                setCurrentTab("metadata");
+                toast.info(`Loaded metadata for "${asset.name}"`);
+              }}
+              onPackageSelected={(selected) => {
+                setCurrentTab("packaging");
+                toast.info(`Selected ${selected.length} asset(s) for packaging`);
+              }}
             />
           )}
 

@@ -67,10 +67,14 @@
 - [x] Multi-Tenant Workspace Switcher & Creator (`WorkspaceModal.jsx`)
 - [x] Role-Based Tenant Scoping (Owner, Admin, Member) for Projects and Assets
 
-### Phase 2: Project Management & Asset Library (`PROJ-001`, `ASSET-001`, `ASSET-002`)
+### Phase 2: Project Management & Asset Library (`PROJ-001`, `ASSET-001`, `ASSET-002`, `ASSET-003`)
 - [x] Project Workspace & Category Explorer (`ProjectsModule.jsx`)
 - [x] Real Drag-and-Drop SVG Uploader (`PreflightModule.jsx`)
 - [x] SVG DOM Structure Parser (`src/lib/svgParser.js`)
+- [x] Responsive Vector Card Gallery with live SVG previews (`AssetsModule.jsx`)
+- [x] Preflight Status Filter (All, Compliant, Issues Detected) & Search Bar
+- [x] Asset Inspection Slide-Over Drawer with technical specifications
+- [x] Batch Multi-Select & Direct Packaging Trigger (`PACK-002` foundation)
 
 ### Phase 3: Preflight Doctor & Design Fit Checker (`PRE-001`, `FIT-001`)
 - [x] Preflight Inspection Engine (`src/lib/preflightEngine.js`)
