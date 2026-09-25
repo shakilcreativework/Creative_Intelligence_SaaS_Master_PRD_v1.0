@@ -112,8 +112,12 @@
   - [x] Visual weight & element density balance
   - [x] Interactive Outlier Inspector & Side-by-Side Spec Matrix
   - [x] Consistency audit report export
+- [x] Rejection Intelligence Engine (`REJ-001` / PRD §12.13) (`src/lib/rejectionEngine.js`, `RejectionModule.jsx`)
+  - [x] Marketplace rejection notice logging & categorization (Adobe Stock, Shutterstock, Freepik)
+  - [x] PRD §12.13 recurring failure mode analyzer & root cause playbooks
+  - [x] Pre-submission rejection risk simulator with live portfolio asset cross-referencing
+  - [x] Rejection incident log table with CSV export
 - [ ] Production Activity & Historical Audit Log (`PORT-001` / PRD §27)
-- [ ] Rejection Intelligence Engine (`REJ-001` / PRD §12.13)
 
 ### Phase 7: Golden Path Acceptance & Polish
 - [x] MVP Golden Path interactive cycle verified

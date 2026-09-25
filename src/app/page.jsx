@@ -13,6 +13,7 @@ import OpportunitiesModule from "@/components/modules/OpportunitiesModule";
 import AssetsModule from "@/components/modules/AssetsModule";
 import SimilarityModule from "@/components/modules/SimilarityModule";
 import ConsistencyModule from "@/components/modules/ConsistencyModule";
+import RejectionModule from "@/components/modules/RejectionModule";
 import AuthModal from "@/components/auth/AuthModal";
 import WorkspaceModal from "@/components/workspace/WorkspaceModal";
 import { SAMPLE_ERRONEOUS_SVG, SAMPLE_COMPLIANT_SVG } from "@/lib/sampleVectors";
@@ -296,6 +297,20 @@ export default function HomePage() {
           {currentTab === "consistency" && (
             <ConsistencyModule
               workspaceAssets={assets}
+            />
+          )}
+
+          {currentTab === "rejection" && (
+            <RejectionModule
+              assets={assets}
+              onNavigateToPreflight={(asset) => {
+                setCurrentTab("preflight");
+                toast.info(`Loaded "${asset.name}" into Preflight Doctor`);
+              }}
+              onNavigateToMetadata={(asset) => {
+                setCurrentTab("metadata");
+                toast.info(`Loaded "${asset.name}" into Metadata Studio`);
+              }}
             />
           )}
 
